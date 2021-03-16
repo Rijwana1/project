@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>javascript - add table Row</title>
+<meta charset="windows-1252">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css"/> 
+ <script>
+function addRow()
+{
+var fname = document.getElementById('fname').value;
+var lname = document.getElementById('lname').value;
+var age = document.getElementById('age').value;
+var department = document.getElementById('department').value;
+var email = document.getElementById('email').value;
+
+var table = document.getElementsByTagName('table')[0];
+
+var newRow = table.insertRow(table.rows.length/2+1 );
+
+var cel1 = newRow.insertCell(0);
+var cel2 = newRow.insertCell(1);
+var cel3 = newRow.insertCell(2);
+var cel4 = newRow.insertCell(3);
+var cel5 = newRow.insertCell(4);
+cel1.innerHTML = fname;
+cel2.innerHTML = lname;
+cel3.innerHTML = age;
+cel4.innerHTML = department;
+cel5.innerHTML = email;
+}
+
+
+</script>
+
+</head>
+<body>
+<h2>ENTER STUDENT DETAILS</h2></br></br></br>
+&nbsp;&nbsp;First name :<input type="text" name="fname" id="fname"/><br/><br/>
+&nbsp;&nbsp;Last name :<input type="text" name="lname" id="lname"/><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Age  :<input type="text" name="age" id="age"/><br/><br/>
+Department  :<input type="text" name="department" id="department"/><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email Id  :<input type="email" name="email" id="email"/><br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="button"onclick="addRow();">Save</button><br/><br/>
+<table border="1">
+<tr>
+<th>First Name</th>
+<th>Last Name</th>
+<th>Age</th>
+<th>Department</th>
+<th>Email Id</th>
+</tr>
+
+
+</table>
+</body>
+</html>
