@@ -23,7 +23,6 @@ obj.x=4;*/
 //var agruments=9; keywords // public, private,public,implements,interface,package as so..
 function myfunction()
 {
-    alert(this);
+    alert(this);// undefined
 }
 myfunction();
-
